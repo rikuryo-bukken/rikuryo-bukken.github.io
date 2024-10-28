@@ -1,0 +1,37 @@
+body {
+    min-height: 100vh;
+    min-width : 100vh;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+ul {
+
+    list-style: none;
+}
+
+#unity-container {
+    margin: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: azure;
+    border-radius: 20px;
+    width: 80%;
+}
+
+#pager {
+    background-color: darkcyan;
+    width: 15%;
+    padding: 0 2em 0 2em;
+    min-height: 100vh;
+}
+
+#pager ul {
+    background-color: azure;
+    border-radius: 10px;
+    margin-top: 10%;
+
+}

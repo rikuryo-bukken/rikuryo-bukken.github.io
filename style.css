@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+body,
+html {
+    margin: 0;
+    top: 0;
+    user-select: none;
+}
+
+body {
+    background-image: url('./bukken_logo.png');
+    
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: top 80vh left 90vh;
+}
+
+#header {
+
+    margin: 0px;
+    height: 40%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 0%;
+    background: linear-gradient(to bottom, transparent 0%, transparent 30%, #fff 100%), url(./big_poster_ch.png);
+    background-position: 0 75%;
+}
+
+#header h1 {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 6em;
+}
+
+p {
+    margin: 0;
+}
+
+#introduce {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#intro_sentence{
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+
+#topic_container {
+    background-color: rgb(255, 192, 167);
+    margin: 2%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#browse_links {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#X_link {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    left: 0%;
+
+    font: inherit;
+    text-decoration: inherit;
+    
+    line-height: 3;
+    width: 30%;
+    height: 10vh;
+    border: 2px solid #ff5353;
+    display: block;
+    font-weight: bold;
+    font-size: 4vh;
+    max-width: 50%;
+    padding: 0;
+}
+#X_link::before {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    content: "";
+    background-color: #fff;
+    mix-blend-mode: difference; /* difference（差分） */
+    transition: 0.3s;
+}
+
+#X_link:hover::before{
+    width: 100%;
+}
+
+#works_link {
+    background-color: deepskyblue;
+    color : white;
+    position: relative;
+
+    font: inherit;
+    text-decoration: inherit;
+    
+    line-height: 3;
+    width: 30%;
+    height: 10vh;
+    border: 2px solid #ff5353;
+    display: block;
+    font-weight: bold;
+    font-size: 4vh;
+    max-width: 50%;
+    padding: 0;
+}
+
+#works_link::before {
+    position: absolute;
+    left: 0%;
+    width: 0;
+    height: 10vh;
+    content: "";
+    background-color: #fff;
+    mix-blend-mode: difference; /* difference（差分） */
+    transition: 0.3s;
+}
+
+#works_link:hover::before{
+    width: 100%;
+}
+
+#page_name{
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.topic {
+    border-bottom: 1px solid #000;
+    font-size: large;
+}
+
+.weak {
+    color: gray;
+    font-size: 0.8em;
+}

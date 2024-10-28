@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>138grade_browse</title>
+</head>
+
+<body>
+    <ul id="contents">
+        <h1>138期制作物一覧</h1>
+        <li id="c0" class="toggleOffContent">
+            <p><button class="toggleButton" id="c0_button">レーシングゲーム</button></p>
+            <div id="c0_intro">
+                <section>
+                    <p>2024年度六稜祭にて展示。<br>Blenderで車体やコース・背景など3Dオブジェクトをモデリングし、Unityを用いて制作。<br>PC推奨</p>
+                </section>
+                <a class="to_nextPage" href="./test_game/index.html">
+                    <p>Go to Page</p>
+                </a>
+            </div>
+        </li>
+        <li id="c1" class="toggleOffContent">
+            <p><button class="toggleButton" id="c1_button">ストラテジーゲーム</button></p>
+            <div id="c1_intro">
+                <section>
+                    <p>2024年度六稜祭にて展示。<br>制作を通して、プログラミング未経験の部員がC#やUnityの練習を行った。<br>PC推奨</p>
+                </section>
+                <a class="to_nextPage" href="./strategy_game/index.html">
+                    <p>Go to Page</p>
+                </a>
+            </div>
+        </li>
+        <li id="c2" class="toggleOffContent">
+            <p><button class="toggleButton" id="c2_button">その他</button></p>
+            <div id="c2_intro">
+                <section>
+                    <p>六稜祭宣伝用のポスター、<br>デスクトップPC(メンテナンス)、<br>公式サイト、公式Xなど</p>
+                </section>
+                <a class="to_nextPage" href="./others/">
+                    <p>Go to Page</p>
+                </a>
+            </div>
+        </li>
+        <img class="moving_img" id="c0_pic" name="racing" src="./racing_game.png" alt="レーシングゲーム画像">
+        <img class="moving_img" id="c1_pic" name="strategy" src="./strategy.jpg" alt="ストラテジーゲーム画像">
+        <img class="moving_img" id="c2_pic" name="others" src="./others/desktop.jpg" alt="その他画像">
+    </ul>
+    <div id="pager">
+        <ul>
+            <li><a href="../../index.html">トップページ</a></li>
+            <li><a href="../index.html">期ごと一覧</a></li>
+        </ul>
+    </div>
+    <p class="weak">ver. 0.0.0</p>
+    <script src="../script.js"></script>
+</body>
+
+</html>

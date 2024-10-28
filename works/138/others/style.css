@@ -1,0 +1,76 @@
+html {
+    font-family:"Yu Gothic";
+    font-size: larger;
+    font-weight: 500;
+    line-height: normal;
+}
+h1{
+    border-bottom: 2px dotted #000;
+}
+h2{
+    border-bottom: 1px solid #000;
+    max-width: 90%;
+}
+p {
+    margin-bottom: 0;
+}
+.smallSpace {
+    height:auto;
+}
+.mutter {
+    color: #6b6b6b;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#contents {
+    width: 70%;
+    overflow-x: wrap;
+}
+#imgBox {
+    justify-content: space-around;
+}
+.normal_img{
+    width: 50vw;
+}
+.small_img{
+    height: 40vh;
+}
+#racing {
+    height: 50vh;
+}
+#big_poster {
+    height: 50vh;
+}
+.flexBox {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+}
+
+.twitter-timeline_wrapper {
+    max-width: 30vw;
+    max-height: 50vh;
+    width: 30vw;
+    border: 1px solid #2f2f2f;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.twitter-timeline_wrapper::-webkit-scrollbar {
+    background: #d5d5d5;
+    border-radius: 20px;
+    width: 1vw;
+}
+.twitter-timeline_wrapper::-webkit-scrollbar:hover {
+    background-color: #b6b6b6;
+}
+.twitter-timeline_wrapper::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 20px;
+}
+.twitter-timeline_wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #141414;
+}

@@ -1,0 +1,180 @@
+html{
+    height: 100%;
+    user-select: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;
+
+    height: 100%;
+    bottom: 0;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+#contents {
+    margin: 2% 3% auto 3%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: rgb(220, 255, 255);
+    border-radius: 20px;
+    width: 80%;
+}
+#contents li:hover .toggleButton{
+    background-color: rgb(141, 235, 238);
+    transition: 0.2s 0s all;
+    transition-timing-function: ease-in;
+}
+
+.toggleOffContent {
+    background-color: cadetblue;
+    margin: 0 auto 9em 0;
+    padding: 0.4em;
+    border-width: 4px;
+    width: 60%;
+    height: 3em;
+    border-color: black;
+}
+
+.toggleOnContent {
+    background-color: rgb(141, 235, 238);
+
+    height: 12em;
+    margin: 0 auto auto 0;
+    margin-bottom: 0em;
+    padding: 0.4em;
+    border-width: 4px;
+    width: 60%;
+    border-color: black;
+    transition: 0.2s 0s all;
+    transition-timing-function: ease-in;
+}
+
+#contents li a {
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#contents li details summary {
+    border: none;
+    background-color: cadetblue;
+    text-align: left;
+    color: #fff;
+    font-size: large;
+    padding: 0.7em 4px;
+}
+
+.toggleButton {
+    border: none;
+    background-color: cadetblue;
+    text-align: left;
+    color: #fff;
+    font-size: large;
+    padding: 0.7em 4px;
+}
+
+.toggleOnContent .toggleButton {
+    background-color: rgb(141, 235, 238);
+    transition: 0.2s 0s all;
+    transition-timing-function: ease-in;
+}
+
+#contents li p{
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+#contents li :hover p button {
+    background-color: rgb(141, 235, 238);
+}
+
+#contents li div {
+    background-color: white;
+    display: none;
+    height: 8em;
+    position: relative;
+}
+
+#contents li div section {
+    width: 70%;
+    right: 0;
+}
+
+#contents li div p {
+    overflow: wrap;
+}
+
+#contents li div a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 8em;
+    width: 30%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(49, 170, 226, 0.9) 50%);
+    background-position: 3px 0;
+    background-size: 200% auto;
+    transition: .3s;
+}
+
+#contents li div a p {
+    font-size: larger;
+    margin-top: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+    color: #000;
+}
+
+#contents li div a:hover {
+    background-position: -100% 0;
+}
+
+#contents li div a:hover p {
+    color: #fff;
+}
+
+
+
+.moving_img {
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    opacity: 0.0;
+}
+#c0_pic {
+    width: 40%;
+    top: 10%;
+}
+
+#pager {
+    background-color: darkcyan;
+    width: 15%;
+    height: 100%;
+    padding: 0 2em 0 2em;
+
+    z-index: 2;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}
+
+#pager ul {
+    background-color: azure;
+    border-radius: 10px;
+    margin-top: 10%;
+
+}
+.weak {
+    font-size: 0.8em;
+    color: gray;
+}
