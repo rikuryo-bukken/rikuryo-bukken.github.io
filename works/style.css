@@ -28,15 +28,16 @@ ul {
     border-radius: 20px;
     width: 80%;
 }
-#contents li:hover .toggleButton{
+#contents li .toggleButton:hover {
     background-color: rgb(141, 235, 238);
     transition: 0.2s 0s all;
     transition-timing-function: ease-in;
 }
 
-.toggleOffContent {
+#contents li details {
     background-color: cadetblue;
-    margin: 0 auto 9em 0;
+    /*margin: 0 auto 9em 0;*/
+    margin-bottom: 9em;
     padding: 0.4em;
     border-width: 4px;
     width: 60%;
@@ -44,7 +45,7 @@ ul {
     border-color: black;
 }
 
-.toggleOnContent {
+#contents li details[open] {
     background-color: rgb(141, 235, 238);
 
     height: 12em;
@@ -71,15 +72,7 @@ ul {
     color: #fff;
     font-size: large;
     padding: 0.7em 4px;
-}
-
-.toggleButton {
-    border: none;
-    background-color: cadetblue;
-    text-align: left;
-    color: #fff;
-    font-size: large;
-    padding: 0.7em 4px;
+    list-style: none;
 }
 
 .toggleOnContent .toggleButton {
@@ -98,23 +91,22 @@ ul {
     background-color: rgb(141, 235, 238);
 }
 
-#contents li div {
+#contents li details div {
     background-color: white;
-    display: none;
     height: 8em;
     position: relative;
 }
 
-#contents li div section {
+#contents li details div section {
     width: 70%;
     right: 0;
 }
 
-#contents li div p {
+#contents li details div p {
     overflow: wrap;
 }
 
-#contents li div a {
+#contents li details div a {
     position: absolute;
     right: 0;
     top: 0;
@@ -126,7 +118,7 @@ ul {
     transition: .3s;
 }
 
-#contents li div a p {
+#contents li details div a p {
     font-size: larger;
     margin-top: 3em;
     margin-left: 2em;
@@ -135,11 +127,11 @@ ul {
     color: #000;
 }
 
-#contents li div a:hover {
+#contents li details div a:hover {
     background-position: -100% 0;
 }
 
-#contents li div a:hover p {
+#contents li details div a:hover p {
     color: #fff;
 }
 
@@ -148,12 +140,31 @@ ul {
 .moving_img {
     z-index: 1;
     position: absolute;
-    top: 40%;
-    opacity: 0.0;
+    left: 60%;
+    /*top: 40%;*/
+    /*opacity: 0.0;*/
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
+
+details ~ .moving_img img {
+    transform: translateX(15vw);
+    opacity: 0.0;
+    transition: all 0.5s ease-in;
+}
+details[open] ~ .moving_img img {
+    transform: translateX(0vw);
+    opacity: 1.0;
+    transition: all 0.5s ease-out;
+}
+
 #c0_pic {
-    width: 40%;
-    top: 10%;
+    width: 40vw;
+    /*top: 10%;*/
 }
 
 #pager {
