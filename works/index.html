@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -9,69 +9,75 @@
 </head>
 
 <body>
-    <ul id="contents">
-        <h1>期ごと一覧</h1>
-        <!--この辺はID多用してる　形式を揃えたいならclassにして-->
-        <!--紹介文：id={num}_intro, 写真：id={num}_pic-->
-        <!--
-        ・クリックして各タブを開く
-        ・タブを開くときにすでに開いているタブがあれば閉じる
-        この際の閉じる関数は今開いているタブを再クリックして閉じる関数とは背景変更のけ挙動が異なる
-        -->
-        <!--
-        <li id="c0" class="toggleOffContent">
-            <p><button class="toggleButton" id="c0_button">138期</button></p>
-            <div id="c0_intro">
-                <section>
-                    <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
-                </section>
-                <a class="to_nextPage" href="./138/index.html">
-                    <p>Go to Page</p>
-                </a>
-            </div>
-        </li>
-        -->
-        <li id="c0">
-            
-            <details>
-                <summary class="toggleButton" id="c0_button">138期</summary>
-                <div id="c0_intro">
-                    <section>
-                        <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
-                    </section>
-                    <a class="to_nextPage" href="./138/index.html">
-                        <p>Go to Page</p>
-                    </a>
-                </div>
-            </details>
-            <div class="moving_img">
-                <img id="c0_pic" name="bukken_logo" src="./bukken_logo.png" alt="138期の画像">
-            </div>
-        </li>
-        <li id="c1">
-            <details>
-                <summary class="toggleButton" id="c1_button">139期</summary>
-                <div id="c1_intro">
-                    <section>
-                        <p>部員数は３人。<br>一年間でノベルゲーム・ストラテジーゲーム・アクションゲームを作る予定。<br>現在はノベルゲームを制作中。近日公開予定。</p>
-                    </section>
-                    <a class="to_nextPage" href="./">
-                        <p>Go to Page</p>
-                    </a>
-                </div>
-            </details>
-            <div class="moving_img">
-                <img id="c1_pic" name="" src="./139_num.png" alt="139期の画像">
-            </div>
-        </li>
-    </ul>
-    <div id="pager">
-        <ul>
-            <li><a href="../">トップページ</a></li>
-
-        </ul>
+    <div id="main_contents">
+        <div id="contents">
+            <h1>期ごと一覧</h1>
+            <ul>
+                <!--この辺はID多用してる　形式を揃えたいならclassにして-->
+                <!--紹介文：id={num}_intro, 写真：id={num}_pic-->
+                <!--
+                ・クリックして各タブを開く
+                ・タブを開くときにすでに開いているタブがあれば閉じる
+                この際の閉じる関数は今開いているタブを再クリックして閉じる関数とは背景変更のけ挙動が異なる
+                -->
+                <!--
+                <li id="c0" class="toggleOffContent">
+                    <p><button class="toggleButton" id="c0_button">138期</button></p>
+                    <div id="c0_intro">
+                        <section>
+                            <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
+                        </section>
+                        <a class="to_nextPage" href="./138/index.html">
+                            <p>Go to Page</p>
+                        </a>
+                    </div>
+                </li>
+                -->
+                <li id="c0">
+                    
+                    <details>
+                        <summary class="toggleButton" id="c0_button">138期</summary>
+                        <div id="c0_intro">
+                            <section>
+                                <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
+                            </section>
+                            <a class="to_nextPage" href="./138/index.html">
+                                <p>Go to Page</p>
+                            </a>
+                        </div>
+                    </details>
+                    <div class="moving_img">
+                        <img id="c0_pic" name="bukken_logo" src="./bukken_logo.png" alt="138期の画像">
+                    </div>
+                </li>
+                <li id="c1">
+                    <details>
+                        <summary class="toggleButton" id="c1_button">139期</summary>
+                        <div id="c1_intro">
+                            <section>
+                                <p>部員数は３人。<br>一年間でノベルゲーム・ストラテジーゲーム・アクションゲームを作る予定。<br>現在はノベルゲームを制作中。近日公開予定。</p>
+                            </section>
+                            <a class="to_nextPage" href="./">
+                                <p>Go to Page</p>
+                            </a>
+                        </div>
+                    </details>
+                    <div class="moving_img">
+                        <img id="c1_pic" name="" src="./139_num.png" alt="139期の画像">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p class="weak">ver. 0.0.0</p>
     </div>
-    <p class="weak">ver. 0.0.0</p>
+    <div id="sub_contents">
+        <div id="pager">
+            <ul>
+                <li><a href="../">トップページ</a></li>
+
+            </ul>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 
