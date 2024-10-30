@@ -88,6 +88,10 @@ ul {
     font-size: large;
     padding: 0.7em 4px;
     list-style: none;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .toggleOnContent .toggleButton {
@@ -153,11 +157,9 @@ ul {
 
 
 .moving_img {
-    z-index: 1;
-    position: absolute;
-    left: 60%;
-
     position: fixed;
+    z-index: 1;
+    left: 60%;
     top: 0;
     bottom: 0;
     display: flex;
