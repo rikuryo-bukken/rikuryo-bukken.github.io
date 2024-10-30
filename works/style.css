@@ -4,16 +4,12 @@ html{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
     color: #333333;
-    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
     margin: 0;
     background-color: white;
-
-    height: 100%;
-    bottom: 0;
 
     display: flex;
     flex-direction: row;
@@ -25,6 +21,10 @@ body {
 #sub_contents {
     flex: 2;
     height: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 ul {
@@ -34,13 +34,16 @@ ul {
 
 #contents {
     margin: 2% 3% auto 3%;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    padding-left: 3em;
+    padding: 3em;
     background-color: rgb(220, 255, 255);
     border-radius: 20px;
     width: 80%;
 }
+
+#contents li {
+    height: 15em;
+}
+
 #contents li .toggleButton:hover {
     background-color: rgb(141, 235, 238);
     transition: 0.2s 0s all;
@@ -181,13 +184,7 @@ details[open] ~ .moving_img img {
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
-    padding: 0 2em 0 2em;
-    z-index: 2;
-
-    position: sticky;
-    top: 0;
-
-    padding-top: 10%;
+    padding: 10% 2em;
 }
 
 #pager ul {
@@ -204,4 +201,34 @@ details[open] ~ .moving_img img {
 .weak {
     font-size: 0.8em;
     color: gray;
+}
+
+
+@media screen and (max-width: 959px) {
+	body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main_contents {
+        flex: none;
+    }
+    #sub_contents {
+        flex: none;
+        height: auto;
+    
+        position: static;
+    }
+    #pager {
+        height: auto;
+    }
+
+    #contents {
+        padding: 5%;
+    }
+}
+@media screen and (max-width: 480px) {
+	#contents {
+        padding: 2%;
+    }
 }

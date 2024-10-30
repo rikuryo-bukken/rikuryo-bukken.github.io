@@ -171,14 +171,17 @@ p {
         width: fit-content;
         margin-right: auto;
         margin-left: auto;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
     #X_link {
+        max-width: none;
         width: 100%;
         margin-bottom: 10px;
     }
     #works_link {
+        max-width: none;
         width: 100%;
     }
 }
