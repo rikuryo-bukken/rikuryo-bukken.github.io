@@ -6,6 +6,11 @@ html{
     color: #333333;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
@@ -25,11 +30,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 2;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
 }
 
 #contents {
@@ -94,12 +94,6 @@ ul {
     text-overflow: ellipsis;
 }
 
-.toggleOnContent .toggleButton {
-    background-color: rgb(141, 235, 238);
-    transition: 0.2s 0s all;
-    transition-timing-function: ease-in;
-}
-
 #contents li p{
     margin-top: 0;
     margin-bottom: 0;
@@ -113,7 +107,6 @@ ul {
 #contents li details div {
     background-color: white;
     height: 8em;
-    position: relative;
     display: flex;
     align-items: stretch;
 }
@@ -232,5 +225,14 @@ details[open] ~ .moving_img img {
 @media screen and (max-width: 480px) {
 	#contents {
         padding: 2%;
+    }
+
+    #contents li details div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contents li details div a {
+        border-top: 2px solid rgba(49, 170, 226, 0.9);
     }
 }
