@@ -11,7 +11,7 @@ body {
     font-family: 'Noto Sans JP', 'BIZ UDGothic', sans-serif;
     color: #333333;
 
-    background-image: url('./bukken_logo.png');
+    background-image: url('./bukken_logo.webp');
     
     background-size: 90%;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
     padding-top: 10%;
     padding-bottom: 10%;
     padding-left: 0%;
-    background: linear-gradient(to bottom, transparent 0%, transparent 30%, #fff 100%), url(./big_poster_ch.png);
+    background: linear-gradient(to bottom, transparent 0%, transparent 30%, #fff 100%), url(./big_poster_ch.webp);
     background-position: 0 75%;
 }
 
@@ -75,7 +75,7 @@ p {
 }
 
 #X_link {
-    background-color: #000;
+    background-color: #333;
     color: #fff;
     position: relative;
     left: 0%;
@@ -109,7 +109,7 @@ p {
 }
 
 #works_link {
-    background-color: deepskyblue;
+    background-color: #0099cc;
     color : white;
     position: relative;
 

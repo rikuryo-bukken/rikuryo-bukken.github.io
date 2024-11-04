@@ -37,21 +37,28 @@ body {
     padding: 3em;
     background-color: rgb(220, 255, 255);
     border-radius: 20px;
-    width: 80%;
 }
 
 #contents li {
     height: 15em;
 }
 
-#contents li .toggleButton:hover {
+#contents li details .toggleButton:hover {
     background-color: rgb(141, 235, 238);
+    color: #000000;
+    transition: 0.2s 0s all;
+    transition-timing-function: ease-in;
+}
+
+#contents li details[open] .toggleButton:hover {
+    background-color: #517C8A;
+    color: #fff;
     transition: 0.2s 0s all;
     transition-timing-function: ease-in;
 }
 
 #contents li details {
-    background-color: cadetblue;
+    background-color: #517C8A;
     margin-bottom: 9em;
     padding: 0.4em;
     border-width: 4px;
@@ -60,29 +67,8 @@ body {
     border-color: black;
 }
 
-#contents li details[open] {
-    background-color: rgb(141, 235, 238);
-
-    height: 12em;
-    margin: 0 auto auto 0;
-    margin-bottom: 0em;
-    padding: 0.4em;
-    border-width: 4px;
-    width: 60%;
-    border-color: black;
-    transition: 0.2s 0s all;
-    transition-timing-function: ease-in;
-}
-
-#contents li a {
-    font: inherit;
-    color: inherit;
-    text-decoration: inherit;
-}
-
 #contents li details summary {
     border: none;
-    background-color: cadetblue;
     text-align: left;
     color: #fff;
     font-size: large;
@@ -92,6 +78,31 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    cursor: pointer;
+}
+
+#contents li details[open] {
+    background-color: rgb(141, 235, 238);
+
+    height: 12em;
+    margin-bottom: 0em;
+    padding: 0.4em;
+    border-width: 4px;
+    width: 60%;
+    border-color: black;
+    transition: 0.2s 0s all;
+    transition-timing-function: ease-in;
+}
+
+#contents li details[open] summary {
+    color: #000000;
+}
+
+#contents li a {
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 #contents li p{
@@ -157,6 +168,11 @@ body {
     bottom: 0;
     display: flex;
     align-items: center;
+}
+
+.moving_img img {
+    max-height: 60vh;
+    object-fit: contain;
 }
 
 details ~ .moving_img img {
