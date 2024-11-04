@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
-
 body,
 html {
     margin: 0;
@@ -140,10 +138,6 @@ p {
 
 #works_link:hover::before{
     width: 100%;
-}
-
-#page_name{
-    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .topic {
