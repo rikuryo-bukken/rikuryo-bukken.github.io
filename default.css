@@ -1,0 +1,26 @@
+body {
+    font-family: 'Noto Sans JP', 'BIZ UDGothic', 'メイリオ', 'Meiryo', 'Meiryo UI', sans-serif;
+    color: #333333;
+}
+
+:root {
+    interpolate-size: allow-keywords; /* 2024年11月04日現在、主要なブラウザのうちchromeでしかサポートされていないプロパティ */
+}
+
+img {
+    object-fit: contain;
+}
+
+button, input, textarea {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+button, details summary {
+    cursor: pointer;
+}
+
+:fullscreen {
+    background-color: white;
+}
