@@ -1,254 +1,132 @@
-html{
-    height: 100%;
-    user-select: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    color: #333333;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
 body {
-    min-height: 100vh;
-    margin: 0;
-    background-color: white;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-size: large;*/
+    color: #333333;
+    height: 100vh;
 }
+
 #main_contents {
-    flex: 7;
-}
-#sub_contents {
-    flex: 2;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-
-    position: sticky;
-    top: 0;
-    z-index: 2;
 }
 
 #contents {
-    margin: 2% 3% auto 3%;
-    padding: 3em;
-    background-color: rgb(220, 255, 255);
-    border-radius: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 4% - 3rem); /* (親要素の高さ) - (#contentsのpadding) - (バージョン情報のpadding) */
+    display: flex;
+    flex-direction: column;
 }
 
-#contents li {
-    height: 15em;
-}
-
-#contents li details .toggleButton:hover {
-    background-color: rgb(141, 235, 238);
-    color: #000000;
-    transition: 0.2s 0s all;
-    transition-timing-function: ease-in;
-}
-
-#contents li details[open] .toggleButton:hover {
-    background-color: #517C8A;
-    color: #fff;
-    transition: 0.2s 0s all;
-    transition-timing-function: ease-in;
-}
-
-#contents li details {
-    background-color: #517C8A;
-    margin-bottom: 9em;
-    padding: 0.4em;
-    border-width: 4px;
-    width: 60%;
-    height: 3em;
-    border-color: black;
-}
-
-#contents li details summary {
-    border: none;
-    text-align: left;
-    color: #fff;
-    font-size: large;
-    padding: 0.7em 4px;
-    list-style: none;
-
+#menu_container {
+    flex: auto;
+    position: relative;
+    width: 100%;
     overflow: hidden;
+}
+
+#menu_container > div {
+    height: 100%;
+    overflow: auto;
+}
+
+#menu {
+    display: table;
+    width: 100%;
+}
+
+#menu > div {
+    display: table-row;
+}
+
+#menu > div > * {
+    display: table-cell;
+}
+
+#menu > div > input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+
+#menu > div > input[type="radio"] ~ label {
     white-space: nowrap;
-    text-overflow: ellipsis;
-
+    padding: 3px;
+    border-radius: 3px;
     cursor: pointer;
+    width: 0;
+    border-right: 1px solid #333333;
+}
+#menu > div > input[type="radio"] ~ label:hover {
+    background-color: #9dffff;
+}
+#menu > div > input[type="radio"]:focus-visible ~ label {
+    outline: 2px solid #333333;
+}
+#menu > div > input[type="radio"]:checked ~ label {
+    background-color: #3affff;
+    background-color: #8fff3a;
 }
 
-#contents li details[open] {
-    background-color: rgb(141, 235, 238);
-
-    height: 12em;
-    margin-bottom: 0em;
-    padding: 0.4em;
-    border-width: 4px;
-    width: 60%;
-    border-color: black;
-    transition: 0.2s 0s all;
-    transition-timing-function: ease-in;
-}
-
-#contents li details[open] summary {
-    color: #000000;
-}
-
-#contents li a {
-    font: inherit;
-    color: inherit;
-    text-decoration: inherit;
-}
-
-#contents li p{
-    margin-top: 0;
-    margin-bottom: 0;
-    
-}
-
-#contents li :hover p button {
-    background-color: rgb(141, 235, 238);
-}
-
-#contents li details div {
-    background-color: white;
-    height: 8em;
-    display: flex;
-    align-items: stretch;
-}
-
-#contents li details div section {
-    flex: 7;
-
-    padding: 5px;
-    overflow-y: auto;
-}
-
-#contents li details div p {
-    overflow: wrap;
-}
-
-#contents li details div a {
-    flex: 3;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(49, 170, 226, 0.9) 50%);
-    background-position: 3px 0;
-    background-size: 200% auto;
-    transition: .3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#contents li details div a p {
-    font-size: larger;
-    text-align: center;
-    color: #333;
-}
-
-#contents li details div a:hover {
-    background-position: -100% 0;
-}
-
-#contents li details div a:hover p {
-    color: #fff;
-}
-
-
-
-.moving_img {
-    position: fixed;
-    z-index: 1;
-    left: 60%;
+#menu > div > div {
+    position: absolute;
     top: 0;
     bottom: 0;
-    display: flex;
-    align-items: center;
+    overflow: auto;
+    margin-left: 16px;
+    margin-right: 30px;  /* スクロールバーに合わせて調整 */
+    z-index: 1;
 }
 
-.moving_img img {
-    max-height: 60vh;
-    object-fit: contain;
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        display: none;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        display: block;
+        transform: translateX(0%);
+    }
+}
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        display: block;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateX(100%);
+    }
+}
+#menu > div > div {
+    /*animation: slideOut 0.2s ease-in 0s 1 normal forwards;*/
+    opacity: 0;
+    display: none;
+}
+#menu > div > input[type="radio"]:checked ~ div {
+    animation: slideIn 0.2s ease-out 0s 1 normal forwards;
+    opacity: 1;
+    display: block;
 }
 
-details ~ .moving_img img {
-    transform: translateX(15vw);
-    opacity: 0.0;
-    transition: all 0.5s ease-in;
-}
-details[open] ~ .moving_img img {
-    transform: translateX(0vw);
-    opacity: 1.0;
-    transition: all 0.5s ease-out;
+#menu > div > div > h2 {
+    margin: 0;
 }
 
-#c0_pic {
-    width: 40vw;
+#menu > div:last-child {
+    opacity: 0;
 }
-
-#pager {
-    background-color: darkcyan;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    padding: 10% 2em;
+#menu > div:last-child > input[type="radio"] ~ div {
+    position: static;
+    display: table-cell;
 }
-
-#pager ul {
-    background-color: azure;
-    border-radius: 10px;
-    margin-top: 0;
-    margin-bottom: 10%;
-}
-
-#pager ul li a {
-    padding: 3px 5px;
-}
-
-.weak {
-    font-size: 0.8em;
-    color: gray;
-}
-
 
 @media screen and (max-width: 959px) {
-	body {
-        display: flex;
-        flex-direction: column;
-    }
-
     #main_contents {
-        flex: none;
-    }
-    #sub_contents {
-        flex: none;
-        height: auto;
-    
-        position: static;
-    }
-    #pager {
-        height: auto;
-    }
-
-    #contents {
-        padding: 5%;
-    }
-}
-@media screen and (max-width: 480px) {
-	#contents {
-        padding: 2%;
-    }
-
-    #contents li details div {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #contents li details div a {
-        border-top: 2px solid rgba(49, 170, 226, 0.9);
+        flex: 1;
+        height: 90%;
     }
 }
