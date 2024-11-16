@@ -8,3 +8,12 @@ dd {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
+dd.weak {
+    font-size: 0.9em;
+    color: #545454;
+}
+
+dd.link > a {
+    color: #000055;
+}

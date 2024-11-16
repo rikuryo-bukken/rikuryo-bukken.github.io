@@ -44,6 +44,16 @@ body {
 
 #pager ul li a {
     padding: 3px 5px;
+    text-decoration: none;
+}
+#pager ul li a:link {
+    color: #33007b;
+}
+#pager ul li a:visited {
+    color: #33007b;
+}
+#pager ul li a:active {
+    color: #7b0000;
 }
 
 
