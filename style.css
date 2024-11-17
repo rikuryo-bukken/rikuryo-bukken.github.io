@@ -46,7 +46,7 @@ p {
 
 #intro_sentence{
     font-size: 1.5em;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.7);
 
     margin: 0 2vw;
 }
@@ -103,6 +103,7 @@ p {
 
 #X_link:hover::before, #X_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 #works_link {
@@ -137,6 +138,7 @@ p {
 
 #works_link:hover::before, #works_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 #games_link {
@@ -173,6 +175,7 @@ p {
 
 #games_link:hover::before, #games_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 .topic {
