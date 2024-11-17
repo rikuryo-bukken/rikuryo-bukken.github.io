@@ -63,7 +63,6 @@ body {
     outline: 2px solid #333333;
 }
 #menu > div > input[type="radio"]:checked ~ label {
-    background-color: #3affff;
     background-color: #8fff3a;
 }
 
@@ -116,8 +115,17 @@ body {
     margin: 0;
 }
 
+#menu > div > div img {
+    max-width: 100%;
+    max-height: 30vh;
+}
+
 #menu > div:last-child {
+    user-select: none;
     opacity: 0;
+}
+#menu > div:last-child > input[type="radio"] ~ label {
+    cursor: default;
 }
 #menu > div:last-child > input[type="radio"] ~ div {
     position: static;

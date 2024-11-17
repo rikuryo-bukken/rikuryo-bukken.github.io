@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学年別ページ一覧 | 北野高校物理研究部</title>
-    <meta name="description" content="北野高校物理研究部公式サイトです。このページから、学年ごとに活動内容や制作物が紹介されたページへ移動することができます。">
     <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="北野高校物理研究部公式サイトです。このページから、学年ごとに活動内容や制作物が紹介されたページへ移動することができます。">
     <link rel="stylesheet" href="./../default.css">
     <link rel="stylesheet" href="./../format.css">
     <link rel="stylesheet" href="./style.css">
@@ -60,6 +60,17 @@
                 <div>
                     <div id="menu">
                         <div>
+                            <input type="radio" name="grades" id="top" value="top" checked>
+                            <label for="top">トップ</label>
+                            <div>
+                                <h2>学年ごとのページ</h2>
+                                <section>
+                                    <p>このページから学年ごとのページへ移動することができます。左から期を選択してください。</p>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- 新しい期を追加する場合はこのコメントの直下に挿入 -->
+                        <div>
                             <input type="radio" name="grades" id="139" value="139">
                             <label for="139">139期</label>
                             <div>
@@ -70,6 +81,7 @@
                                 <a class="to_nextPage" href="/139/">
                                     <p>Go to Page</p>
                                 </a>
+                                <img name="" src="./139_logo(kari).png" alt="139期の画像">
                             </div>
                         </div>
                         <div>
@@ -83,6 +95,7 @@
                                 <a class="to_nextPage" href="/138/">
                                     <p>Go to Page</p>
                                 </a>
+                                <img name="bukken_logo" src="./bukken_logo.webp" alt="138期の画像">
                             </div>
                         </div>
                         <div>
@@ -101,11 +114,14 @@
         <p class="weak">ver. 0.0.0</p>
     </div>
     <div id="sub_contents">
-        <div id="pager">
+        <nav id="pager">
             <ul>
                 <li><a href="../">トップページ</a></li>
             </ul>
-        </div>
+            <ul>
+                <li><a href="/sitemap/">サイトマップ</a></li>
+            </ul>
+        </nav>
     </div>
 </body>
 </html>
