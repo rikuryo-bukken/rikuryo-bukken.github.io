@@ -46,7 +46,7 @@ p {
 
 #intro_sentence{
     font-size: 1.5em;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.7);
 
     margin: 0 2vw;
 }
@@ -93,15 +93,17 @@ p {
     position: absolute;
     left: 0;
     width: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     content: "";
     background-color: #fff;
     mix-blend-mode: difference; /* difference（差分） */
     transition: 0.3s;
 }
 
-#X_link:hover::before{
+#X_link:hover::before, #X_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 #works_link {
@@ -126,15 +128,17 @@ p {
     position: absolute;
     left: 0%;
     width: 0;
-    height: 10vh;
+    top: 0;
+    bottom: 0;
     content: "";
     background-color: #fff;
     mix-blend-mode: difference; /* difference（差分） */
     transition: 0.3s;
 }
 
-#works_link:hover::before{
+#works_link:hover::before, #works_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 #games_link {
@@ -152,25 +156,26 @@ p {
     font: inherit;
     text-decoration: inherit;
     
-    line-height: 3;
+    padding: 1rem 2rem;
     border: 2px solid #ff5353;
     font-weight: bold;
     font-size: 4vh;
-    padding: 0;
 }
 
 #games_link::before {
     position: absolute;
     left: 0%;
     width: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     content: "";
     background-color: #ffffff24;
     transition: 0.3s;
 }
 
-#games_link:hover::before{
+#games_link:hover::before, #games_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 .topic {
