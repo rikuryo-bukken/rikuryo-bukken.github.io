@@ -80,9 +80,8 @@ p {
     font: inherit;
     text-decoration: inherit;
     
-    line-height: 3;
+    line-height: 2.5;
     width: 30%;
-    height: 10vh;
     border: 2px solid #ff5353;
     display: block;
     font-weight: bold;
@@ -113,9 +112,8 @@ p {
     font: inherit;
     text-decoration: inherit;
     
-    line-height: 3;
+    line-height: 2.5;
     width: 30%;
-    height: 10vh;
     border: 2px solid #ff5353;
     display: block;
     font-weight: bold;
@@ -136,6 +134,42 @@ p {
 }
 
 #works_link:hover::before{
+    width: 100%;
+}
+
+#games_link {
+    display: block;
+    width: fit-content;
+    min-width: 30%;
+    text-align: center;
+    margin: auto;
+
+    background-color: #1b6600;
+    color: #ffffff;
+    position: relative;
+    left: 0%;
+
+    font: inherit;
+    text-decoration: inherit;
+    
+    line-height: 3;
+    border: 2px solid #ff5353;
+    font-weight: bold;
+    font-size: 4vh;
+    padding: 0;
+}
+
+#games_link::before {
+    position: absolute;
+    left: 0%;
+    width: 0;
+    height: 100%;
+    content: "";
+    background-color: #ffffff24;
+    transition: 0.3s;
+}
+
+#games_link:hover::before{
     width: 100%;
 }
 
