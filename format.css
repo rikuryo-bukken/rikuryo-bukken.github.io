@@ -39,7 +39,12 @@ body {
     margin-top: 0;
     margin-bottom: 10%;
     list-style: none;
+    padding: 0.1px 0;
     padding-left: 0;
+}
+
+#pager ul li {
+    margin: 7px 0;
 }
 
 #pager ul li a {
