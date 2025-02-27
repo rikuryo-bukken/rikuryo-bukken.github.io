@@ -1,6 +1,5 @@
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /*font-size: large;*/
     color: #333333;
     height: 100vh;
 }
@@ -88,20 +87,7 @@ body {
         transform: translateX(0%);
     }
 }
-@keyframes slideOut {
-    0% {
-        opacity: 1;
-        display: block;
-        transform: translateX(0%);
-    }
-    100% {
-        opacity: 0;
-        display: none;
-        transform: translateX(100%);
-    }
-}
 #menu > div > div {
-    /*animation: slideOut 0.2s ease-in 0s 1 normal forwards;*/
     opacity: 0;
     display: none;
 }
