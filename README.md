@@ -1,90 +1,107 @@
 # rikuryo-bukken.github.io
-### サイトの構造について
+## サイトの構造について
+
 ```
 .
-│  big_poster_ch.png
-│  bukken_logo.png
-│  index.html (/style.css)
-│  README.md
-│  style.css
-│  styleForGame.css
+├── README.md
 │
-└─works
-      138_num.png
-      139_num.png
-      bukken_logo.png
-      index.html (/works/style.css /works/script.js)
-      script.js
-      style.css
+├── favicon.ico
+├── bukken_logo.webp
+│
+├── default.css
+├── format.css
+├── styleForGame.css
+│
+├── robots.txt
+│
+│
+├── index.html (/default.css /style.css)
+├── style.css
+├── OGP_image.jpg
+├── thumbnail.jpg
+│
+├── big_poster_ch.webp
+│
+├── _config.yml
+│
+├── works
+│   ├── 138_num.png
+│   ├── 139_num.png
+│   ├── bukken_logo.png
+│   ├── index.html (/default.css /format.css /works/style.css)
+│   └── style.css
+│
+├── games
+│   ├── index.html (/default.css /format.css /games/style.css)
+│   ├── style.css
+│   ├── OGP_image.jpg
+│   └── thumbnail.jpg
+│
+└── sitemap
+    ├── index.html (/default.css /sitemap/style.css)
+    └── style.css
 ```
 
-### ver. x.y.z
-サイトが期ごとに更新されていることを示すために表示する
-<br>
-x: メジャーバージョン 見た目や操作性に影響を及ぼすような大きな変更やページの追加など
-<br>
-y: マイナーバージョン 細かな機能向上や部分的な情報の追加やページの修正など
-<br>
-z: パッチバージョン バグ修正や誤字脱字の訂正など
-<br>
+一部の重要でないファイルは省略している。
 
-### /works/script.js
+## ver. x.y.z
+
+サイトが期ごとに更新されていることを示すために表示する
+
+x: メジャーバージョン 見た目や操作性に影響を及ぼすような大きな変更やページの追加など  
+y: マイナーバージョン 細かな機能向上や部分的な情報の追加やページの修正など  
+z: パッチバージョン バグ修正や誤字脱字の訂正など
+
+## /works/script.js
+
 このスクリプトは、紹介文の非表示と、動く画像の初期位置と大きさの設定と、
 ul内の各ボタンクリック時の
-<br>
-    ・画像のスライドイン/アウト
-    <br>
-    ・liのクラス変更(animationの実行)
-    <br>
-    ・紹介文の表示
-    <br>
-を行っている
-<br>
-cssのanimationを使えばもっと簡単に実装できたのかもしれないが、ここではあえてそうしなかった。
-煩わしく思ったら後の世代の人が変更してください
 
-### /home/works/style.cssと/home/works/script.jsをつかったページに「コンテンツ」を増やしたいとき
-```
-<li id="c{n}" class="toggleOffContent">
-    <p><button class="toggleButton" id="c{n}_button">...</button></p>
-    <div id="c{n}_intro">
+- 画像のスライドイン/アウト
+- liのクラス変更(animationの実行)
+- 紹介文の表示
+
+を行っていた。
+
+現在は、javascriptが無効にされていてもページの操作に支障がないように、cssを用いて実装している。
+
+今後複雑なアニメーションを実装したくなったときなどに参考となるよう、ファイルは残している。
+
+## /home/works/style.cssと/home/works/script.jsをつかったページに「コンテンツ」を増やしたいとき
+
+```html
+<div>
+    <input type="radio" name="grades" id="{n}" value="{n}">
+    <label for="{n}">{n}期</label>
+    <div>
+        <h2>{n}期</h2>
         <section>
-            <p>...</p>
+            <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
         </section>
-        <a class="to_nextPage" href="./{...}/index.html">
+        <a class="to_nextPage" href="/{n}/">
             <p>Go to Page</p>
         </a>
+        <img src="./bukken_logo.webp" alt="">
     </div>
-</li>
+</div>
 ```
-{n}には一つ前のコンテンツのnに対してn+1を入れる
-<br>
-```
-例："c{n}_intro" => "c{n+1}_intro"
-```
-<br>
-他に{}がついているところは空気読んで変更してね
+
+{n}には卒業期を入れる。
   
 画像を添付したければ、
-<br>
+
+```html
+  <img src="./bukken_logo.webp" alt="">
 ```
-  <ul id="contents">
-      ...
-      <img class="moving_img" id="c{n}_pic" name="{a}" src="{...}" alt="{...}">
-  </ul>
-```
-<br>
-のように、"contents"ボックスの終わりに書く
-{n}は先程と同様、{a}はscript.js内での指定に使う
 
-画像の大きさを指定したければ、
-script.jsのimgNameCheckListに
-a,大きさ(ビューポートheight)を記入する
-どちらも""で囲うこと。
+の部分を変更する。src属性には画像のパスを、alt属性には適切な文字列を設定する。装飾的な画像や限られた情報価値しかない画像など、意味を持たない画像を添付する場合は、alt属性には空文字列を設定する。
 
+## その他
 
-### その他
 情報を追加する際は、個人情報や重要情報の映り込みに細心の注意を払うこと。
+
 また、制作物を公開する際は、開発に関わった人と顧問に公開許可を得ること。
+
 特にゲームなどの場合は、有料のアセットなどが含まれていないかどうかを精査すること。
+
 各学年ごとのページは別にリポジトリを作ってつなげてください。
