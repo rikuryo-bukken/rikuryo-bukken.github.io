@@ -25,9 +25,8 @@
 ├── _config.yml
 │
 ├── works
-│   ├── 138_num.png
-│   ├── 139_num.png
-│   ├── bukken_logo.png
+│   ├── images
+│   │   └── bukken_logo.webp
 │   ├── index.html (/default.css /format.css /works/style.css)
 │   └── style.css
 │
@@ -42,7 +41,7 @@
     └── style.css
 ```
 
-一部の重要でないファイルは省略している。
+主要なファイル以外は省略している。
 
 ## ver. x.y.z
 
