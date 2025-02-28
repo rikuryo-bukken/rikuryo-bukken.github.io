@@ -1,6 +1,7 @@
 body {
     font-family: 'Noto Sans JP', 'BIZ UDGothic', 'メイリオ', 'Meiryo', 'Meiryo UI', sans-serif;
     color: #333333;
+    line-height: 1.5;
 }
 
 :root {
