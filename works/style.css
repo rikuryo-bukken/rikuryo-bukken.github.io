@@ -12,7 +12,7 @@ body {
 
 #contents {
     box-sizing: border-box;
-    height: calc(100% - 4% - 3rem); /* (親要素の高さ) - (#contentsのpadding) - (バージョン情報のpadding) */
+    height: calc(100% - 4%); /* (親要素の高さ) - (#contentsのpadding) */
     display: flex;
     flex-direction: column;
 }
