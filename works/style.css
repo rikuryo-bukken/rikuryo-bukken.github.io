@@ -97,7 +97,12 @@ body {
     display: block;
 }
 
-#menu > div > div > h2 {
+#menu > div > div h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+#menu > div > div section > p {
     margin: 0;
 }
 
