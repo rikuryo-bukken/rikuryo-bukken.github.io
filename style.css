@@ -8,6 +8,8 @@ body {
     font-family: 'Noto Sans JP', 'BIZ UDGothic', sans-serif;
     color: #333333;
 
+    margin-bottom: 5rem;
+
     background-image: url('./bukken_logo.webp');
     
     background-size: 90%;
