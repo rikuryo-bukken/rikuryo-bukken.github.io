@@ -9,6 +9,11 @@ dd {
     margin-bottom: 0.5em;
 }
 
+dd img {
+    max-width: 100%;
+    max-height: 40vh;
+}
+
 dd.weak {
     font-size: 0.9em;
     color: #545454;

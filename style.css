@@ -17,7 +17,7 @@ body {
     background-position: top 80vh left 90vh;
 }
 
-#header {
+header {
 
     margin: 0px;
     height: 40%;
@@ -28,7 +28,7 @@ body {
     background-position: 0 75%;
 }
 
-#header h1 {
+header h1 {
     color: #fff;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-weight: 800;
@@ -192,7 +192,7 @@ p {
 
 
 @media screen and (max-width: 959px) {
-	#header h1 {
+	header h1 {
         font-size: 2em;
     }
     #intro_sentence{
@@ -200,7 +200,7 @@ p {
     }
 }
 @media screen and (max-width: 480px) {
-	#header h1 {
+	header h1 {
         font-size: 3em;
     }
 

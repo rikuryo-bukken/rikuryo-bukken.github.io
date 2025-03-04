@@ -12,15 +12,15 @@
 </head>
 <body>
     <div id="main_contents">
-        <div id="contents">
+        <main id="contents">
             <h1>期ごと一覧</h1>
             <div id="menu_container">
                 <div>
                     <div id="menu">
                         <div>
-                            <input type="radio" name="grades" id="139" value="139" checked>
+                            <input type="radio" name="grades" id="139" value="139" aria-controls="139_content" checked>
                             <label for="139">139期</label>
-                            <div>
+                            <div id="139_content">
                                 <section>
                                     <h2>139期</h2>
                                     <p>部員数は３人。</p>
@@ -34,9 +34,9 @@
                             </div>
                         </div>
                         <div>
-                            <input type="radio" name="grades" id="138" value="138">
+                            <input type="radio" name="grades" id="138" value="138" aria-controls="138_content">
                             <label for="138">138期</label>
-                            <div>
+                            <div id="138_content">
                                 <section>
                                     <h2>138期</h2>
                                     <p>部員数は４人。</p>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div>
-                            <input type="radio" name="grades" id="other" value="other" disabled>
+                            <input type="radio" name="grades" id="other" value="other" disabled aria-hidden="true">
                             <label for="other">以上</label>
                             <div>
                                 <section>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
     <div id="sub_contents">
         <nav id="pager">
