@@ -38,6 +38,8 @@
 │   └── style.css
 │
 ├── games
+│   ├── images
+│   │   └── ...
 │   ├── index.html (/default.css /format.css /games/style.css)
 │   ├── style.css
 │   ├── OGP_image.jpg
@@ -70,22 +72,22 @@ z: パッチバージョン バグ修正や誤字脱字の訂正など
 
 ```html
 <div>
-    <input type="radio" name="grades" id="{grade}" value="{grade}" checked>
+    <input type="radio" name="grades" id="{grade}" value="{grade}" aria-controls="{grade}_content" checked>
     <label for="{grade}">{grade}期</label>
-    <div>
-        <h2>{grade}期</h2>
+    <div id="{grade}_content">
         <section>
+            <h2>{grade}期</h2>
             <p>{紹介文を入力}</p>
+            <a class="to_nextPage" href="/{grade}/">
+                <p>Go to Page</p>
+            </a>
+            <img src="./images/bukken_logo.webp" alt="">
         </section>
-        <a class="to_nextPage" href="/{grade}/">
-            <p>Go to Page</p>
-        </a>
-        <img src="./images/bukken_logo.webp" alt="">
     </div>
 </div>
 ```
 
-`{grade}`には卒業期の番号を、{紹介文を入力}があるsectionタグには紹介文を記述する。紹介文は、この後も適宜更新すること。
+`{grade}`には卒業期の番号を、`{紹介文を入力}`のところに紹介文を記述する。pタグは必要に応じて追加する。紹介文は、この後も適宜更新すること。
 
 また、imgのsrc属性は期の画像のパスを設定する。期の画像はimagesフォルダの中に入れ、ファイル名は卒業期の番号から始めること。
 
@@ -101,6 +103,7 @@ z: パッチバージョン バグ修正や誤字脱字の訂正など
 
 ```html
 <dt>{game title}</dt>
+<dd><a href="/{grade}/{new_game}" aria-label="ゲームをプレイ"><img src="images/{grade}/{new_game}.webp" alt="レーシングゲームのプレイ画面"></a></dd>
 <dd>ゲームの説明</dd>
 <dd class="weak">ゲーム制作についてなど追加の説明があれば</dd>
 <dd>推奨環境などあれば</dd>
@@ -108,6 +111,8 @@ z: パッチバージョン バグ修正や誤字脱字の訂正など
 ```
 
 `{game title}`にはゲームのタイトルを、ddタグは適宜追加したり削除したりしながらゲームの説明を、aタグの`/{grade}/{new_game}`にはゲームのページへのリンクをそれぞれ入力する。
+
+また、ゲームのプレイ画面などを表示する場合は、1つ目のddタグの`images/{grade}/{new_game}.webp`の部分に画像へのパスを入力する。画像を表示しない場合はこのddタグは削除する。
 
 ## /sitemap/
 
@@ -157,6 +162,6 @@ z: パッチバージョン バグ修正や誤字脱字の訂正など
 </body>
 ```
 
-ページの内容が記述されるのは＜ページの内容＞の部分である。
+ページの内容が記述されるのは`＜ページの内容＞`の部分である。
 
 id属性がpagerのタグ内には、ulタグを追加しても削除してもよい。基本的には、1つ目のulタグにはパンくずリスト（記述の仕方は138期のページなどを参考のこと）を、2つ目のulタグにはサイトマップを記述する。なお、ulタグ以外を追加するのは不可である。
