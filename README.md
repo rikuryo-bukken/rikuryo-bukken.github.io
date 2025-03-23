@@ -103,11 +103,11 @@ z: パッチバージョン バグ修正や誤字脱字の訂正など
 
 ```html
 <dt>{game title}</dt>
-<dd><a href="/{grade}/{new_game}" aria-label="ゲームをプレイ"><img src="images/{grade}/{new_game}.webp" alt="レーシングゲームのプレイ画面"></a></dd>
+<dd><a href="/{grade}/{new_game}" aria-label="{game title}をプレイ"><img src="images/{grade}/{new_game}.webp" alt="レーシングゲームのプレイ画面"></a></dd>
 <dd>ゲームの説明</dd>
 <dd class="weak">ゲーム制作についてなど追加の説明があれば</dd>
 <dd>推奨環境などあれば</dd>
-<dd class="link"><a href="/{grade}/{new_game}">ゲームはこちらからプレイ可能</a></dd>
+<dd class="link"><a href="/{grade}/{new_game}">{game title}をプレイ</a></dd>
 ```
 
 `{game title}`にはゲームのタイトルを、ddタグは適宜追加したり削除したりしながらゲームの説明を、aタグの`/{grade}/{new_game}`にはゲームのページへのリンクをそれぞれ入力する。
