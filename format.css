@@ -21,7 +21,7 @@ body {
 #contents {
     margin: 2% 3%;
     padding: 3em;
-    background-color: rgb(220, 255, 255);
+    background-color: #dcffff;
     border-radius: 20px;
 }
 
@@ -41,6 +41,9 @@ body {
     list-style: none;
     padding: 0.1px 0;
     padding-left: 0;
+}
+#pager ul:last-child {
+    margin-bottom: 0;
 }
 
 #pager ul li {
@@ -79,6 +82,10 @@ body {
     }
     #pager {
         height: auto;
+        padding: 1.2em 2em;
+    }
+    #pager ul {
+        margin-bottom: 15px;
     }
 
     #contents {
