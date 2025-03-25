@@ -8,6 +8,8 @@ body {
     font-family: 'Noto Sans JP', 'BIZ UDGothic', sans-serif;
     color: #333333;
 
+    margin-bottom: 5rem;
+
     background-image: url('./bukken_logo.webp');
     
     background-size: 90%;
@@ -15,8 +17,7 @@ body {
     background-position: top 80vh left 90vh;
 }
 
-#header {
-
+header {
     margin: 0px;
     height: 40%;
     padding-top: 10%;
@@ -26,7 +27,7 @@ body {
     background-position: 0 75%;
 }
 
-#header h1 {
+header h1 {
     color: #fff;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-weight: 800;
@@ -46,7 +47,7 @@ p {
 
 #intro_sentence{
     font-size: 1.5em;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.7);
 
     margin: 0 2vw;
 }
@@ -68,7 +69,7 @@ p {
     width: 100%;
     text-align: center;
     margin-top: 2em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 #X_link {
@@ -80,9 +81,8 @@ p {
     font: inherit;
     text-decoration: inherit;
     
-    line-height: 3;
+    line-height: 2.5;
     width: 30%;
-    height: 10vh;
     border: 2px solid #ff5353;
     display: block;
     font-weight: bold;
@@ -94,15 +94,17 @@ p {
     position: absolute;
     left: 0;
     width: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     content: "";
     background-color: #fff;
     mix-blend-mode: difference; /* difference（差分） */
     transition: 0.3s;
 }
 
-#X_link:hover::before{
+#X_link:hover::before, #X_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 #works_link {
@@ -113,9 +115,8 @@ p {
     font: inherit;
     text-decoration: inherit;
     
-    line-height: 3;
+    line-height: 2.5;
     width: 30%;
-    height: 10vh;
     border: 2px solid #ff5353;
     display: block;
     font-weight: bold;
@@ -128,15 +129,54 @@ p {
     position: absolute;
     left: 0%;
     width: 0;
-    height: 10vh;
+    top: 0;
+    bottom: 0;
     content: "";
     background-color: #fff;
     mix-blend-mode: difference; /* difference（差分） */
     transition: 0.3s;
 }
 
-#works_link:hover::before{
+#works_link:hover::before, #works_link:focus-visible::before {
     width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
+}
+
+#games_link {
+    display: block;
+    width: fit-content;
+    min-width: 30%;
+    text-align: center;
+    margin: auto;
+
+    background-color: #1b6600;
+    color: #ffffff;
+    position: relative;
+    left: 0%;
+
+    font: inherit;
+    text-decoration: inherit;
+    
+    padding: 1rem 2rem;
+    border: 2px solid #ff5353;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+#games_link::before {
+    position: absolute;
+    left: 0%;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    background-color: #ffffff24;
+    transition: 0.3s;
+}
+
+#games_link:hover::before, #games_link:focus-visible::before {
+    width: 100%;
+    box-shadow: #333333 2px 2px 13px 0px;
 }
 
 .topic {
@@ -151,7 +191,7 @@ p {
 
 
 @media screen and (max-width: 959px) {
-	#header h1 {
+	header h1 {
         font-size: 2em;
     }
     #intro_sentence{
@@ -159,7 +199,7 @@ p {
     }
 }
 @media screen and (max-width: 480px) {
-	#header h1 {
+	header h1 {
         font-size: 3em;
     }
 

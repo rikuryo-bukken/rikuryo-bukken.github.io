@@ -4,65 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学年別ページ一覧 | 北野高校物理研究部</title>
-    <meta name="description" content="北野高校物理研究部公式サイトです。このページから、学年ごとに活動内容や制作物が紹介されたページへ移動することができます。">
     <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="北野高校物理研究部公式サイトです。このページから、学年ごとに活動内容や制作物が紹介されたページへ移動することができます。">
     <link rel="stylesheet" href="./../default.css">
+    <link rel="stylesheet" href="./../format.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="main_contents">
-        <div id="contents">
+        <main id="contents">
             <h1>期ごと一覧</h1>
-            <ul>
-                <!--紹介文：id={num}_intro, 写真：id={num}_pic-->
-                <!--
-                ・クリックして各タブを開く
-                ・タブを開くときにすでに開いているタブがあれば閉じる
-                この際の閉じる関数は今開いているタブを再クリックして閉じる関数とは背景変更の挙動が異なる
-                -->
-                <li id="c0">
-                    <details>
-                        <summary class="toggleButton" id="c0_button">138期</summary>
-                        <div id="c0_intro">
-                            <section>
-                                <p>部員数は４人。<br>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
-                            </section>
-                            <a class="to_nextPage" href="/138/">
-                                <p>Go to Page</p>
-                            </a>
+            <div id="menu_container">
+                <div>
+                    <div id="menu">
+                        <div>
+                            <input type="radio" name="grades" id="139" value="139" aria-controls="139_content" checked>
+                            <label for="139">139期</label>
+                            <div id="139_content">
+                                <section>
+                                    <h2>139期</h2>
+                                    <p>部員数は３人。</p>
+                                    <p>一年間でノベルゲーム・ストラテジーゲーム・アクションゲームを作る予定。</p>
+                                    <p>現在はノベルゲームを制作中。近日公開予定。</p>
+                                    <a class="to_nextPage" href="/139/">
+                                        <p>Go to Page</p>
+                                    </a>
+                                    <img src="./images/139_logo(kari).png" alt="">
+                                </section>
+                            </div>
                         </div>
-                    </details>
-                    <div class="moving_img">
-                        <img id="c0_pic" name="bukken_logo" src="./bukken_logo.webp" alt="138期の画像">
-                    </div>
-                </li>
-                <li id="c1">
-                    <details>
-                        <summary class="toggleButton" id="c1_button">139期</summary>
-                        <div id="c1_intro">
-                            <section>
-                                <p>部員数は３人。<br>一年間でノベルゲーム・ストラテジーゲーム・アクションゲームを作る予定。<br>現在はノベルゲームを制作中。近日公開予定。</p>
-                            </section>
-                            <a class="to_nextPage" href="/139/">
-                                <p>Go to Page</p>
-                            </a>
+                        <div>
+                            <input type="radio" name="grades" id="138" value="138" aria-controls="138_content">
+                            <label for="138">138期</label>
+                            <div id="138_content">
+                                <section>
+                                    <h2>138期</h2>
+                                    <p>部員数は４人。</p>
+                                    <p>2024年度六稜祭で大ポスターとストラテジーゲーム・レーシングゲームを展示したほか、当サイトの制作を開始した。</p>
+                                    <a class="to_nextPage" href="/138/">
+                                        <p>Go to Page</p>
+                                    </a>
+                                    <img src="./images/bukken_logo.webp" alt="">
+                                </section>
+                            </div>
                         </div>
-                    </details>
-                    <div class="moving_img">
-                        <img id="c1_pic" name="" src="./139_logo(kari).png" alt="139期の画像">
+                        <div>
+                            <input type="radio" name="grades" id="other" value="other" disabled aria-hidden="true">
+                            <label for="other">以上</label>
+                            <div>
+                                <section>
+                                    <p>ラジオボタンから卒業期を選択してください。</p>
+                                </section>
+                            </div>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </div>
-        <p class="weak">ver. 0.0.0</p>
+                </div>
+            </div>
+        </main>
     </div>
     <div id="sub_contents">
-        <div id="pager">
+        <nav id="pager">
             <ul>
                 <li><a href="../">トップページ</a></li>
             </ul>
-        </div>
+            <ul>
+                <li><a href="/sitemap/">サイトマップ</a></li>
+            </ul>
+        </nav>
     </div>
-    <script src="./script.js"></script>
 </body>
 </html>

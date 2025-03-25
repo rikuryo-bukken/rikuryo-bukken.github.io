@@ -1,0 +1,38 @@
+body > div {
+    margin: 2% 3%;
+    padding: 3em;
+    background-color: rgb(220, 255, 255);
+    border-radius: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+a:link {
+    color: #333333;
+}
+a:visited {
+    color: #333333;
+}
+a:hover {
+    color: #727272;
+}
+a:active {
+    color: #7b0000;
+}
