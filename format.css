@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: white;
+    background-color: darkcyan;
 
     display: flex;
     flex-direction: row;
@@ -8,6 +8,8 @@ body {
 }
 #main_contents {
     flex: 7;
+
+    background-color: white;
 }
 #sub_contents {
     flex: 2;
