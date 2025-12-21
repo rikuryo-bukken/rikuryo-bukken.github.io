@@ -1,6 +1,6 @@
 # rikuryo-bukken.github.io
 
-詳細は[Wikiページ](./wiki)を参照のこと。
+詳細は[Wikiページ](https://github.com/rikuryo-bukken/rikuryo-bukken.github.io/wiki)を参照のこと。
 
 ## ページ更新の際の注意点
 
