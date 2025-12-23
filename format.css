@@ -37,7 +37,7 @@ body {
     padding: 10% 2em;
 }
 
-#pager ul {
+#pager ul, #pager ol {
     background-color: azure;
     border-radius: 10px;
     margin-top: 0;
@@ -46,25 +46,25 @@ body {
     padding: 0.1px 0;
     padding-left: 0;
 }
-#pager ul:last-child {
+#pager ul:last-child, #pager ol:last-child {
     margin-bottom: 0;
 }
 
-#pager ul li {
+#pager ul li, #pager ol li {
     margin: 7px 0;
 }
 
-#pager ul li a {
+#pager ul li a, #pager ol li a {
     padding: 3px 5px;
     text-decoration: none;
 }
-#pager ul li a:link {
+#pager ul li a:link, #pager ol li a:link {
     color: #33007b;
 }
-#pager ul li a:visited {
+#pager ul li a:visited, #pager ol li a:visited {
     color: #33007b;
 }
-#pager ul li a:active {
+#pager ul li a:active, #pager ol li a:active {
     color: #7b0000;
 }
 
@@ -88,7 +88,7 @@ body {
         height: auto;
         padding: 1.2em 2em;
     }
-    #pager ul {
+    #pager ul, #pager ol {
         margin-bottom: 15px;
     }
 
