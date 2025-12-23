@@ -8,8 +8,7 @@ body {
 }
 
 
-ul {
-
+ul, ol {
     list-style: none;
 }
 
@@ -29,7 +28,7 @@ ul {
     min-height: 100vh;
 }
 
-#pager ul {
+#pager ul, #pager ol {
     background-color: azure;
     border-radius: 10px;
     margin-top: 10%;
